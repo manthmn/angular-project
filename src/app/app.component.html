@@ -1,0 +1,11 @@
+<app-header (onChooseSection)="sectionChoosed($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-shopping-list *ngIf="!choice; else home"></app-shopping-list>
+      <ng-template #home>
+        <app-recipes></app-recipes>
+      </ng-template>
+    </div>
+  </div>
+</div>
